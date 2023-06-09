@@ -1,0 +1,10 @@
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY,
+    content TEXT NOT NULL
+);
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    body TEXT NOT NULL,
+    post_id INTEGER NOT NULL REFERENCES posts (id) ON DELETE CASCADE
+);
