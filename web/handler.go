@@ -22,7 +22,7 @@ func NewHandler(store posts.Store) *Handler {
 		r.Get("/", h.PostsList())
 		r.Get("/new", h.PostsCreate())
 		r.Post("/", h.PostsStore())
-	})
+	}) // TODO: finish adding other routes/handlers
 	return h
 }
 
